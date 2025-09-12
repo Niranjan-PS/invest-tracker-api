@@ -13,7 +13,7 @@ export const isAuthenticated = async (req, res,next) => {
             return res.status(400).json({ success: false, message: "invalid token" })
 
         }
-        req.user = { id: decoded.id}
+        req.user = { id: decoded.id,_id:decoded.id} 
         next()
 
 
