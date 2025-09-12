@@ -14,7 +14,7 @@ try {
       const portfolioSchemes = await Portfolio.distinct("schemeCode");
       console.log(`Found ${portfolioSchemes.length} unique scheme codes to update`)
 
-      for (const schemeCode of portfolioSchemes) {
+      for (const schemeCode of portfolioSchemes) { 
         try {
           console.log(`Validating and updating NAV for schemeCode: ${schemeCode}`)
           await ensureValidSchemeCode(schemeCode)
@@ -47,7 +47,7 @@ try {
     } catch (error) {
       console.error("NAV update failed:", error.message)
     }
-  });
+  })
 
   updateNavJob.start();
   console.log("Cron job initialized and started")
