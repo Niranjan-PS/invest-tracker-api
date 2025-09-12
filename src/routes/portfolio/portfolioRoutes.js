@@ -2,7 +2,7 @@ import express from "express"
 import {addPortfolioFund,getPortfolioValue,getNAVhistory,getPortfolioList,removePortfolioFund} from "../../controllers/portfolioController/portfolio.js"
 import { isAuthenticated } from "../../middlewares/auth.js"
 import { validateAddFund, validateRemoveFund, validatePortfolioValue,validateNAVHistory, checkValidationResult } from "../../helpers/validation.js"
-import { portfolioUpdateLimiter}from '../../utils/rateLimter.js'
+import { portfolioUpdateLimiter}from '../../utils/rateLimiter.js'
 
 
 const router=express.Router()

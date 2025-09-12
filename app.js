@@ -7,7 +7,7 @@ import fundRoutes from './src/routes/fund/fundRoutes.js'
 import mongoConnect from './src/config/db.js'
 import cookieParser from 'cookie-parser'
 import updateNavJob from "./src/cron/cronJob.js"
-import { apiLimiter}from './src/utils/rateLimter.js'
+import { apiLimiter}from './src/utils/rateLimiter.js'
 import getLoggerMiddleware from './src/utils/logger.js'
 import errorHandler from './src/middlewares/errorHandler.js'
 
