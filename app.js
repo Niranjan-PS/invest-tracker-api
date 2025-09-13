@@ -27,6 +27,9 @@ app.use(cookieParser())
 app.use("/api/auth", authRoutes)
 app.use("/api/portfolio",portfolioRoutes)
 app.use('/api/funds',fundRoutes)
+app.get('/', (req, res) => {
+  res.status(200).json({success:true,message:'api is running'})
+});
 
 app.use(errorHandler)
 
