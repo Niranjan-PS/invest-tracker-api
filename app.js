@@ -30,7 +30,9 @@ app.use('/api/funds',fundRoutes)
 app.get('/', (req, res) => {
   res.status(200).json({success:true,message:'api is running'})
 });
-
+app.get('/api', (req, res) => {
+  res.status(200).json({success:true,message:'api is running,Please proceed to signup'})
+});
 app.use(errorHandler)
 
 export default app
